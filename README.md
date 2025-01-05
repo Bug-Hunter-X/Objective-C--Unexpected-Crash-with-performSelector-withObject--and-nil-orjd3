@@ -1,0 +1,3 @@
+# Objective-C: Unexpected Crash with performSelector:withObject: and nil
+
+This repository demonstrates a subtle bug in Objective-C related to using `performSelector:withObject:` with a `nil` object.  The code appears to handle the `nil` case with a conditional statement, but still crashes.  This is due to the way Objective-C handles selectors and message sending. The second call of `performSelector` still triggers the crash.
